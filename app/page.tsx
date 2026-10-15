@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/royal-dan-hero-v2.png",
+        url: "/images/hero.png",
         width: 1728,
         height: 972,
         alt: "A shop assistant helping a customer at a modern Royal-Dan medicine shop",
