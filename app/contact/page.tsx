@@ -1,266 +1,362 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import SiteHeader from "@/components/SiteHeader";
 
-const siteName = "Royal-Dan Chemical Pharmacy";
-
 export const metadata: Metadata = {
-    title: `Our Locations | ${siteName}`,
+    title: "Contact Us | Royal-Dan Chemical Pharmacy",
     description:
-        "Find Royal-Dan Chemical Pharmacy's OTC medicine shops in Abokobi Boi and Comet Estate, and the central office at Wallace Street, Greater Accra, Ghana.",
+        "Get information about Royal-Dan Chemical Pharmacy's medicine shops, health testing services, first aid and everyday essentials. Find our Abokobi Boi and Comet Estate branches in Greater Accra, Ghana.",
     openGraph: {
-        title: `Our Locations | ${siteName}`,
+        title: "Contact Royal-Dan Chemical Pharmacy",
         description:
-            "Visit our OTC medicine shops in Abokobi Boi and Comet Estate or contact our central office at Wallace Street, Comet Estate.",
+            "Find your nearest Royal-Dan medicine shop and explore our medicines, essential health checks, first aid and everyday essentials.",
         type: "website",
         images: [
             {
-                url: "/images/royal-dan-location.png",
-                width: 1728,
-                height: 972,
-                alt: "Royal-Dan Chemical Pharmacy location",
+                url: "/images/royal-dan-contact.png",
+                width: 1600,
+                height: 900,
+                alt: "Royal-Dan staff member assisting a customer in a modern medicine shop",
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: `Our Locations | ${siteName}`,
+        title: "Contact Us | Royal-Dan Chemical Pharmacy",
         description:
-            "Find Royal-Dan Chemical Pharmacy's medicine shops in Abokobi Boi and Comet Estate, Greater Accra, Ghana.",
-        images: ["/images/royal-dan-location.png"],
+            "Contact Royal-Dan Chemical Pharmacy for medicine shop locations, product availability and service enquiries in Greater Accra, Ghana.",
+        images: ["/images/royal-dan-contact.png"],
     },
 };
 
-const shops = [
+const branches = [
     {
-        name: "Abokobi Boi Shop",
-        area: "Abokobi Boi, Greater Accra",
-        address: "Quist Town Street, Abokobi Boi, Greater Accra Region, Ghana",
-        hours: "Monday – Sunday",
-        time: "7:00 AM – 9:00 PM",
-        map: "https://www.google.com/maps/search/?api=1&query=Quist%20Town%20Street%2C%20Abokobi%20Boi%2C%20Ghana",
-    },
-    {
-        name: "Comet Estate Shop",
+        name: "Comet Estate Branch",
         area: "Comet Estate, Greater Accra",
         address: "Tigo Poll, Comet Estate, Greater Accra Region, Ghana",
-        hours: "Monday – Sunday",
-        time: "7:00 AM – 9:00 PM",
-        map: "https://www.google.com/maps/search/?api=1&query=Tigo%20Poll%2C%20Comet%20Estate%2C%20Ghana",
+        gps: "GE-123-5146",
+        hours: "Monday – Sunday, 7:00 AM – 9:00 PM",
+        map: "https://www.google.com/maps/search/?api=1&query=GE-123-5146%2C%20Ghana",
+    },
+    {
+        name: "Abokobi Branch",
+        area: "Abokobi Boi, Greater Accra",
+        address: "Quist Town Street, Abokobi Boi, Greater Accra Region, Ghana",
+        gps: "GE-043-9602",
+        hours: "Monday – Sunday, 7:00 AM – 9:00 PM",
+        map: "https://www.google.com/maps/search/?api=1&query=GE-043-9602%2C%20Ghana",
     },
 ];
 
-const centralOffice = {
-    name: "Central Office",
-    area: "Comet Estate, Greater Accra",
-    address: "Wallace Street, Comet Estate, Greater Accra Region, Ghana",
-    hours: "Monday – Saturday",
-    time: "8:00 AM – 5:00 PM",
-    map: "https://www.google.com/maps/search/?api=1&query=Wallace%20Street%2C%20Comet%20Estate%2C%20Ghana",
-};
+const enquiryOptions = [
+    {
+        number: "01",
+        title: "Shop locations",
+        description:
+            "Find branch addresses, GhanaPost GPS digital addresses and opening hours.",
+        href: "/locations",
+        linkText: "Find a shop",
+    },
+    {
+        number: "02",
+        title: "Medicines and health services",
+        description:
+            "Explore our medicines, health testing, blood pressure checks, first aid and aftercare.",
+        href: "/services",
+        linkText: "Explore services",
+    },
+    {
+        number: "03",
+        title: "Products and availability",
+        description:
+            "Review our service information and check availability for a particular product or service before visiting.",
+        href: "/locations",
+        linkText: "Plan your visit",
+    },
+];
 
-function LocationDetails({
-    address,
-    hours,
-    time,
-}: {
-    address: string;
-    hours: string;
-    time: string;
-}) {
-    return (
-        <div className="mt-7 space-y-5">
-            <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                    Address
-                </p>
-                <p className="mt-2 leading-7 text-slate-700">{address}</p>
-            </div>
-            <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                    Opening hours
-                </p>
-                <p className="mt-2 font-semibold text-blue-950">{hours}</p>
-                <p className="mt-1 text-sm text-slate-600">{time}</p>
-            </div>
-        </div>
-    );
-}
-
-export default function LocationsPage() {
+export default function ContactPage() {
     return (
         <main className="min-h-screen bg-white text-slate-800">
-            {/* Shared responsive header: desktop navigation and mobile menu */}
-            <SiteHeader activePath="/locations" />
+            {/* Shared responsive header */}
+            <SiteHeader activePath="/contact" />
 
-            <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50">
-                <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-2 lg:py-24">
-                    <div>
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
-                            Find us in Greater Accra
+            {/* Hero */}
+            <section className="relative isolate overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50">
+                <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-2 lg:gap-10 lg:py-24">
+                    <div className="max-w-2xl">
+                        <p className="inline-flex items-center gap-2 rounded-full border border-green-100 bg-white px-4 py-2 text-sm font-semibold text-green-800 shadow-sm">
+                            <span className="h-2 w-2 rounded-full bg-green-600" />
+                            Contact Royal-Dan Chemical Pharmacy
                         </p>
-                        <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-blue-950 sm:text-5xl lg:text-6xl">
-                            Two medicine shops.
-                            <span className="block text-green-700">One central office.</span>
+
+                        <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-blue-950 sm:text-5xl lg:text-6xl">
+                            We are here to{" "}
+                            <span className="text-green-700">help.</span>
                         </h1>
+
                         <p className="mt-6 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
-                            Visit our OTC medicine shops at Abokobi Boi and Comet Estate.
-                            Our central office is also located at Comet Estate on Wallace Street.
-                            Check the relevant opening hours before you visit.
+                            Need information about medicines, health testing, first aid or
+                            everyday essentials? Explore our services and find the Royal-Dan
+                            shop that is most convenient for your visit.
                         </p>
+
                         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                            <a
-                                href="#shop-locations"
+                            <Link
+                                href="/locations"
                                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-blue-900 px-7 py-3 font-semibold text-white transition hover:bg-blue-800"
                             >
-                                View Our Shops <span className="ml-2" aria-hidden="true">↓</span>
-                            </a>
-                            <a
-                                href="#central-office"
+                                Find a Shop
+                                <span className="ml-2" aria-hidden="true">
+                                    →
+                                </span>
+                            </Link>
+
+                            <Link
+                                href="/services"
                                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-3 font-semibold text-blue-950 transition hover:border-green-600 hover:text-green-800"
                             >
-                                Central Office
-                            </a>
+                                Explore Our Services
+                            </Link>
                         </div>
+
                         <div className="mt-10 grid max-w-md grid-cols-2 gap-4 border-t border-slate-200 pt-6">
                             <div>
                                 <p className="text-2xl font-bold text-blue-950">2</p>
-                                <p className="mt-1 text-sm text-slate-600">Customer-facing medicine shops</p>
+                                <p className="mt-1 text-sm text-slate-600">
+                                    Shop locations
+                                </p>
                             </div>
                             <div>
-                                <p className="text-2xl font-bold text-blue-950">1</p>
-                                <p className="mt-1 text-sm text-slate-600">Central office</p>
+                                <p className="text-2xl font-bold text-blue-950">7 days</p>
+                                <p className="mt-1 text-sm text-slate-600">
+                                    Open every week
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-blue-950/10">
-                        <Image
-                            src="/images/royal-dan-location.png"
-                            alt="A staff member assisting a customer in a medicine shop"
-                            width={1728}
-                            height={972}
-                            priority
-                            sizes="(max-width: 1024px) 100vw, 50vw"
-                            className="h-full min-h-[280px] w-full object-cover"
-                        />
+                    <div className="relative">
+                        <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-green-100/60 blur-2xl" />
+
+                        <div className="overflow-hidden rounded-3xl border border-white shadow-2xl shadow-blue-950/10">
+                            <Image
+                                src="/images/royal-dan-contact.png"
+                                alt="A Royal-Dan staff member assisting a customer at the medicine shop counter"
+                                width={1600}
+                                height={900}
+                                priority
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                className="h-auto w-full object-cover"
+                            />
+                        </div>
+
+                        <div className="relative mx-4 -mt-6 rounded-2xl border border-slate-100 bg-white p-4 shadow-xl sm:mx-8 sm:p-5">
+                            <p className="font-semibold text-blue-950">
+                                Your Health, Our Concern.
+                            </p>
+                            <p className="mt-1 text-sm leading-6 text-slate-600">
+                                Medicines, health services, first aid and everyday essentials.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="shop-locations" className="mx-auto max-w-7xl scroll-mt-28 px-5 py-20 sm:px-8 lg:py-24">
+            {/* Enquiry options */}
+            <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
                 <div className="max-w-2xl">
-                    <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">Our branches</p>
+                    <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
+                        How can we help?
+                    </p>
+
                     <h2 className="mt-4 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
-                        Find your nearest medicine shop.
+                        Find the information you need.
                     </h2>
+
                     <p className="mt-5 leading-8 text-slate-600">
-                        Both OTC medicine shops are open every day from 7:00 AM to 9:00 PM.
-                        Choose the location that is most convenient for you.
+                        Choose a topic to learn more, prepare for your visit or find the
+                        right Royal-Dan medicine shop.
                     </p>
                 </div>
 
-                <div className="mt-10 grid gap-6 lg:grid-cols-2">
-                    {shops.map((shop) => (
+                <div className="mt-10 grid gap-5 md:grid-cols-3">
+                    {enquiryOptions.map((option) => (
                         <article
-                            key={shop.name}
-                            className="flex flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-green-200 hover:shadow-xl hover:shadow-blue-950/5 sm:p-8"
+                            key={option.number}
+                            className="rounded-2xl border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-green-200 hover:shadow-xl hover:shadow-blue-950/5 sm:p-7"
                         >
-                            <div className="flex items-start justify-between gap-4">
-                                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-2xl text-blue-900">
-                                    <span aria-hidden="true">⌖</span>
-                                </div>
-                                <span className="rounded-full bg-green-50 px-3 py-1.5 text-xs font-semibold text-green-800">
-                                    Open daily
+                            <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 font-bold text-green-800">
+                                {option.number}
+                            </span>
+
+                            <h3 className="mt-6 text-xl font-bold text-blue-950">
+                                {option.title}
+                            </h3>
+
+                            <p className="mt-3 text-sm leading-7 text-slate-600">
+                                {option.description}
+                            </p>
+
+                            <Link
+                                href={option.href}
+                                className="mt-5 inline-flex items-center font-semibold text-green-800 transition hover:text-green-900"
+                            >
+                                {option.linkText}
+                                <span className="ml-2" aria-hidden="true">
+                                    →
                                 </span>
-                            </div>
-                            <p className="mt-6 text-sm font-medium text-green-700">{shop.area}</p>
-                            <h3 className="mt-2 text-2xl font-bold text-blue-950 sm:text-3xl">{shop.name}</h3>
-                            <LocationDetails address={shop.address} hours={shop.hours} time={shop.time} />
-                            <div className="mt-8 border-t border-slate-100 pt-6">
-                                <a
-                                    href={shop.map}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-blue-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
-                                >
-                                    Find this shop on Google Maps <span className="ml-2" aria-hidden="true">↗</span>
-                                </a>
-                            </div>
+                            </Link>
                         </article>
                     ))}
                 </div>
             </section>
 
-            <section id="central-office" className="scroll-mt-28 bg-slate-50 py-16 sm:py-20">
-                <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:items-center">
-                    <div>
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">Company office</p>
-                        <h2 className="mt-4 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
-                            Royal-Dan central office
-                        </h2>
-                        <p className="mt-5 leading-8 text-slate-600">
-                            Our central office is located on Wallace Street in Comet Estate.
-                            Please note that this is the company office, separate from our two
-                            customer-facing OTC medicine shops.
-                        </p>
+            {/* Branch information */}
+            <section className="bg-slate-50 py-20 sm:py-24">
+                <div className="mx-auto max-w-7xl px-5 sm:px-8">
+                    <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+                        <div className="max-w-2xl">
+                            <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
+                                Visit our shops
+                            </p>
+
+                            <h2 className="mt-4 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
+                                We are in Greater Accra.
+                            </h2>
+
+                            <p className="mt-5 leading-8 text-slate-600">
+                                Both Royal-Dan medicine shopes are open daily from 7:00 AM to
+                                9:00 PM. Use the address and GhanaPost GPS code to help
+                                identify your preferred shop.
+                            </p>
+                        </div>
+
+                        <Link
+                            href="/locations"
+                            className="font-semibold text-green-800 transition hover:text-green-900"
+                        >
+                            View full location details →
+                        </Link>
                     </div>
 
-                    <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-                        <div className="flex items-start justify-between gap-4">
-                            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-green-50 text-2xl text-green-800">
-                                <span aria-hidden="true">⌂</span>
-                            </div>
-                            <span className="rounded-full bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-900">
-                                Central office
-                            </span>
-                        </div>
-                        <p className="mt-6 text-sm font-medium text-green-700">{centralOffice.area}</p>
-                        <h3 className="mt-2 text-2xl font-bold text-blue-950 sm:text-3xl">{centralOffice.name}</h3>
-                        <LocationDetails
-                            address={centralOffice.address}
-                            hours={centralOffice.hours}
-                            time={centralOffice.time}
-                        />
-                        <div className="mt-8 border-t border-slate-100 pt-6">
-                            <a
-                                href={centralOffice.map}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-blue-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+                    <div className="mt-10 grid gap-6 md:grid-cols-2">
+                        {branches.map((branch) => (
+                            <article
+                                key={branch.name}
+                                className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8"
                             >
-                                Find the central office on Google Maps <span className="ml-2" aria-hidden="true">↗</span>
-                            </a>
-                        </div>
-                    </article>
+                                <p className="text-sm font-medium text-green-700">
+                                    {branch.area}
+                                </p>
+
+                                <h3 className="mt-2 text-2xl font-bold text-blue-950">
+                                    {branch.name}
+                                </h3>
+
+                                <div className="mt-6">
+                                    <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                                        Street address
+                                    </p>
+                                    <p className="mt-2 leading-7 text-slate-600">
+                                        {branch.address}
+                                    </p>
+                                </div>
+
+                                <div className="mt-5 rounded-xl bg-green-50 p-4">
+                                    <p className="text-xs font-bold uppercase tracking-wider text-green-800">
+                                        GhanaPost GPS
+                                    </p>
+                                    <p className="mt-2 text-xl font-bold tracking-wide text-blue-950">
+                                        {branch.gps}
+                                    </p>
+                                </div>
+
+                                <div className="mt-5">
+                                    <p className="text-sm font-semibold text-blue-950">
+                                        Opening hours
+                                    </p>
+                                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                                        {branch.hours}
+                                    </p>
+                                </div>
+
+                                <a
+                                    href={branch.map}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-blue-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+                                >
+                                    Get directions
+                                    <span className="ml-2" aria-hidden="true">
+                                        ↗
+                                    </span>
+                                </a>
+                            </article>
+                        ))}
+                    </div>
                 </div>
             </section>
 
-            <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
-                <div className="flex flex-col items-start justify-between gap-7 rounded-3xl bg-blue-950 p-8 sm:p-10 lg:flex-row lg:items-center">
+            {/* Before visiting */}
+            <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
+                <div className="rounded-3xl border border-blue-100 bg-blue-50 p-6 sm:p-10">
+                    <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
+                        Before your visit
+                    </p>
+
+                    <h2 className="mt-3 text-2xl font-bold text-blue-950 sm:text-3xl">
+                        Need a specific medicine or health service?
+                    </h2>
+
+                    <p className="mt-4 max-w-3xl leading-8 text-slate-700">
+                        Availability of particular products and testing services may vary
+                        by location. Review our services and confirm availability before
+                        travelling if you need something specific. Prescription medicines
+                        and testing are subject to applicable requirements.
+                    </p>
+
+                    <Link
+                        href="/services"
+                        className="mt-6 inline-flex items-center font-semibold text-green-800 hover:text-green-900"
+                    >
+                        View our services
+                        <span className="ml-2" aria-hidden="true">
+                            →
+                        </span>
+                    </Link>
+                </div>
+            </section>
+
+            {/* Final CTA */}
+            <section className="bg-blue-950 px-5 py-16 sm:px-8 sm:py-20">
+                <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-7 sm:flex-row sm:items-center">
                     <div className="max-w-2xl">
-                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-400">Need assistance?</p>
-                        <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">We are happy to help.</h2>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-400">
+                            Royal-Dan Chemical Pharmacy
+                        </p>
+
+                        <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
+                            We look forward to welcoming you.
+                        </h2>
+
                         <p className="mt-4 leading-7 text-blue-100">
-                            Contact Royal-Dan Chemical Pharmacy with general enquiries about our
-                            locations, products or services before making your visit.
+                            Find your nearest branch and discover the services available
+                            through Royal-Dan Chemical Pharmacy.
                         </p>
                     </div>
-                    <div className="flex flex-col gap-3 sm:flex-row">
-                        <Link
-                            href="/services"
-                            className="inline-flex min-h-12 items-center justify-center rounded-full bg-green-600 px-7 py-3 font-semibold text-white transition hover:bg-green-500"
-                        >
-                            Explore Services
-                        </Link>
-                        <Link
-                            href="/contact"
-                            className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 px-7 py-3 font-semibold text-white transition hover:bg-white/10"
-                        >
-                            Contact Us
-                        </Link>
-                    </div>
+
+                    <Link
+                        href="/locations"
+                        className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-green-600 px-7 py-3 font-semibold text-white transition hover:bg-green-500"
+                    >
+                        Find a Shop
+                        <span className="ml-2" aria-hidden="true">
+                            →
+                        </span>
+                    </Link>
                 </div>
             </section>
 
@@ -300,12 +396,12 @@ export default function LocationsPage() {
                                 </Link>
                             </li>
                             <li>
-                                <Link className="hover:text-green-700" href="/locations" aria-current="page">
+                                <Link className="hover:text-green-700" href="/locations">
                                     Our Locations
                                 </Link>
                             </li>
                             <li>
-                                <Link className="hover:text-green-700" href="/contact">
+                                <Link className="hover:text-green-700" href="/contact" aria-current="page">
                                     Contact Us
                                 </Link>
                             </li>
@@ -314,9 +410,30 @@ export default function LocationsPage() {
                 </div>
 
                 <div className="border-t border-slate-100">
-                    <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-                        <p>© 2026 Royal-Dan Chemical Pharmacy. All rights reserved.</p>
-                        <p>Greater Accra Region, Ghana</p>
+                    <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 text-xs text-slate-500 sm:px-8">
+                        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                            <p>© 2026 Royal-Dan Chemical Pharmacy. All rights reserved.</p>
+                            <p>Greater Accra Region, Ghana</p>
+                        </div>
+                        <div className="flex flex-col gap-2 border-t border-slate-100 pt-3 sm:flex-row sm:items-center sm:justify-between">
+                            <p>
+                                Powered by{" "}
+                                <a
+                                    href="https://intellixio.tech"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-semibold text-blue-900 transition hover:text-green-700"
+                                >
+                                    Intellixio Technologies Limited
+                                </a>
+                            </p>
+                            <a
+                                href="mailto:contact@intellixio.tech"
+                                className="transition hover:text-green-700"
+                            >
+                                contact@intellixio.tech
+                            </a>
+                        </div>
                     </div>
                 </div>
             </footer>

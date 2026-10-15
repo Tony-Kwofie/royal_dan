@@ -511,9 +511,30 @@ export default function AboutPage() {
                 </div>
 
                 <div className="border-t border-slate-100">
-                    <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-                        <p>© 2026 Royal-Dan Chemical Pharmacy. All rights reserved.</p>
-                        <p>Greater Accra Region, Ghana</p>
+                    <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 text-xs text-slate-500 sm:px-8">
+                        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                            <p>© 2026 Royal-Dan Chemical Pharmacy. All rights reserved.</p>
+                            <p>Greater Accra Region, Ghana</p>
+                        </div>
+                        <div className="flex flex-col gap-2 border-t border-slate-100 pt-3 sm:flex-row sm:items-center sm:justify-between">
+                            <p>
+                                Powered by{" "}
+                                <a
+                                    href="https://intellixio.tech"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-semibold text-blue-900 transition hover:text-green-700"
+                                >
+                                    Intellixio Technologies Limited
+                                </a>
+                            </p>
+                            <a
+                                href="mailto:contact@intellixio.tech"
+                                className="transition hover:text-green-700"
+                            >
+                                contact@intellixio.tech
+                            </a>
+                        </div>
                     </div>
                 </div>
             </footer>
