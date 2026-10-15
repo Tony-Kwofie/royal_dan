@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Royal-Dan Chemical Pharmacy | Your Health, Our Concern",
     description:
       "Explore Royal-Dan Chemical Pharmacy's medicine shops, healthcare products and services in Greater Accra, Ghana.",
-    images: ["/images/royal-dan-hero-v2.png"],
+    images: ["/images/hero.png"],
   },
 };
 
@@ -198,7 +198,7 @@ export default function Home() {
 
             <div className="relative overflow-hidden rounded-3xl border border-white shadow-2xl shadow-blue-950/10">
               <Image
-                src="/images/royal-dan-hero-v2.png"
+                src="/images/hero.png"
                 alt="A shop assistant helping a customer at a modern medicine shop"
                 width={1728}
                 height={972}
@@ -482,7 +482,7 @@ export default function Home() {
 
             <p className="mt-4 leading-7 text-blue-100">
               Find our locations, explore our services or contact Royal-Dan
-              Limited for general enquiries and information about visiting us.
+              Chemical Pharmacy for general enquiries and information about visiting us.
             </p>
           </div>
 

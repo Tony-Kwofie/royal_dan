@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         title: "Products & Services | Royal-Dan Chemical Pharmacy",
         description:
             "Explore OTC medicines, medical supplies, pharmaceutical distribution and mobile clinic services in Ghana.",
-        images: ["/images/royal-dan-hero-v2.png"],
+        images: ["/images/hero.png"],
     },
 };
 
@@ -211,7 +211,7 @@ export default function ServicesPage() {
                         <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-green-100/60 blur-2xl" />
                         <div className="overflow-hidden rounded-3xl border border-white shadow-2xl shadow-blue-950/10">
                             <Image
-                                src="/images/royal-dan-hero-v2.png"
+                                src="/images/hero.png"
                                 alt="Healthcare customer service at Royal-Dan"
                                 width={1728}
                                 height={972}
