@@ -4,22 +4,29 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Royal Dan Limited | Medicines & Health Services in Greater Accra",
+  title: "Royal-Dan Chemical Pharmacy | Your Health, Our Concern",
   description:
-    "Discover Royal Dan Limited's medicine shops in Abokobi Boi and Comet Estate, Greater Accra, Ghana. Explore medicines, first aid, aftercare, health testing and everyday essentials.",
+    "Your Health, Our Concern. Find Royal-Dan Chemical Pharmacy's OTC medicine shops in Abokobi Boi and Comet Estate, Greater Accra, and explore our healthcare products and services.",
   openGraph: {
-    title: "Royal Dan Limited | Medicines & Health Services",
+    title: "Royal-Dan Chemical Pharmacy | Your Health, Our Concern",
     description:
-      "Access medicines, essential health checks, first aid, aftercare and everyday essentials at Royal Dan Limited in Greater Accra, Ghana.",
+      "Your Health, Our Concern. Explore our medicine shops, healthcare products and services in Greater Accra, Ghana.",
     type: "website",
     images: [
       {
         url: "/images/royal-dan-hero-v2.png",
         width: 1728,
         height: 972,
-        alt: "A shop assistant helping a customer at a modern Royal Dan medicine shop",
+        alt: "A shop assistant helping a customer at a modern Royal-Dan medicine shop",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Royal-Dan Chemical Pharmacy | Your Health, Our Concern",
+    description:
+      "Explore Royal-Dan Chemical Pharmacy's medicine shops, healthcare products and services in Greater Accra, Ghana.",
+    images: ["/images/royal-dan-hero-v2.png"],
   },
 };
 
@@ -84,10 +91,10 @@ export default function Home() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
-          <Link href="/" aria-label="Royal Dan Limited homepage">
+          <Link href="/" aria-label="Royal-Dan Chemical Pharmacy homepage">
             <Image
               src="/images/Royal dan.png"
-              alt="Royal Dan Limited"
+              alt="Royal-Dan Chemical Pharmacy"
               width={280}
               height={100}
               priority
@@ -134,7 +141,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-green-100 bg-white px-4 py-2 text-sm font-medium text-green-800 shadow-sm">
               <span className="h-2 w-2 rounded-full bg-green-600" />
-              Your local medicine shop
+              Your Health, Our Concern.
             </div>
 
             <h1 className="text-4xl font-bold leading-tight tracking-tight text-blue-950 sm:text-5xl lg:text-6xl">
@@ -144,7 +151,7 @@ export default function Home() {
 
             <p className="mt-6 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
               We make it easier to access over-the-counter (OTC) services,
-              find your nearest Royal Dan shop and get the assistance you need.
+              find your nearest Royal-Dan shop and get the assistance you need.
               From medicines and essential health checks to first aid and
               everyday essentials, we are here to support your needs.
             </p>
@@ -218,7 +225,7 @@ export default function Home() {
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
-              Welcome to Royal Dan
+              Welcome to Royal-Dan
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
               More than medicines. Support for everyday needs.
@@ -226,7 +233,7 @@ export default function Home() {
           </div>
 
           <p className="max-w-2xl leading-8 text-slate-600">
-            Royal Dan Limited brings together medicine retail, essential health
+            Royal-Dan Chemical Pharmacy brings together medicine retail, essential health
             testing, first aid, aftercare and everyday retail essentials. Our
             two Greater Accra locations give customers a convenient place to
             access these services and products.
@@ -248,7 +255,7 @@ export default function Home() {
 
             <p className="mt-5 leading-8 text-slate-600">
               From medicine access to essential health checks and everyday
-              necessities, explore the ways Royal Dan can help.
+              necessities, explore the ways Royal-Dan can help.
             </p>
           </div>
 
@@ -304,7 +311,7 @@ export default function Home() {
             </h2>
 
             <p className="mt-5 leading-8 text-slate-600">
-              Royal Dan provides essential testing and health checks to help
+              Royal-Dan provides essential testing and health checks to help
               customers access relevant health information. Our services
               include the following:
             </p>
@@ -360,7 +367,7 @@ export default function Home() {
               </h2>
 
               <p className="mt-4 max-w-xl leading-7 text-slate-600">
-                Visit either of our two Greater Accra locations. Both shops
+                Visit either of our two Greater Accra medicine shops. Both shops
                 are open every day from 7:00 AM to 9:00 PM.
               </p>
             </div>
@@ -418,13 +425,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Royal Dan */}
+      {/* About Royal-Dan */}
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div className="relative overflow-hidden rounded-3xl bg-blue-50">
             <Image
               src="/images/royal-dan-about.png"
-              alt="Royal Dan staff assisting a customer in a modern medicine shop"
+              alt="Royal-Dan staff assisting a customer in a modern medicine shop"
               width={1200}
               height={900}
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -434,7 +441,7 @@ export default function Home() {
 
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
-              About Royal Dan Limited
+              About Royal-Dan Chemical Pharmacy
             </p>
 
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
@@ -452,7 +459,7 @@ export default function Home() {
               href="/about"
               className="mt-7 inline-flex items-center font-semibold text-green-800 transition hover:text-green-900"
             >
-              Get to know Royal Dan
+              Get to know Royal-Dan
               <span className="ml-2" aria-hidden="true">
                 →
               </span>
@@ -474,7 +481,7 @@ export default function Home() {
             </h2>
 
             <p className="mt-4 leading-7 text-blue-100">
-              Find our locations, explore our services or contact Royal Dan
+              Find our locations, explore our services or contact Royal-Dan
               Limited for general enquiries and information about visiting us.
             </p>
           </div>
@@ -497,31 +504,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Shared site footer: keep this structure consistent across every page */}
       <footer className="bg-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-2">
           <div>
-            <Link href="/" aria-label="Royal Dan Limited homepage">
+            <Link href="/" aria-label="Royal-Dan Chemical Pharmacy homepage">
               <Image
                 src="/images/Royal dan.png"
-                alt="Royal Dan Limited"
+                alt="Royal-Dan Chemical Pharmacy"
                 width={240}
                 height={90}
                 className="h-auto w-40 object-contain"
               />
             </Link>
-
             <p className="mt-4 max-w-md text-sm leading-7 text-slate-600">
-              Royal Dan Limited operates medicine shops in Abokobi Boi and
-              Comet Estate, Greater Accra, Ghana, providing medicines,
-              essential health services, first aid, aftercare and everyday
-              retail essentials.
+              Royal-Dan Chemical Pharmacy operates OTC medicine shops at
+              Abokobi Boi and Comet Estate in Greater Accra, Ghana.
+            </p>
+            <p className="mt-3 text-sm font-semibold text-blue-900">
+              Your Health, Our Concern.
             </p>
           </div>
 
           <div className="md:justify-self-end">
             <h2 className="font-bold text-blue-950">Explore</h2>
-
             <ul className="mt-4 space-y-3 text-sm text-slate-600">
               <li>
                 <Link className="hover:text-green-700" href="/about">
@@ -549,7 +555,7 @@ export default function Home() {
 
         <div className="border-t border-slate-100">
           <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-            <p>© 2026 Royal Dan Limited. All rights reserved.</p>
+            <p>© 2026 Royal-Dan Chemical Pharmacy. All rights reserved.</p>
             <p>Greater Accra Region, Ghana</p>
           </div>
         </div>

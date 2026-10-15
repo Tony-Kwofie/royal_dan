@@ -4,136 +4,112 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Our Services | Royal Dan Limited",
+    title: "Products & Services | Royal-Dan Chemical Pharmacy",
     description:
-        "Discover medicines, first aid, aftercare, mart products and health testing services at Royal Dan Limited in Greater Accra, Ghana.",
+        "Explore Royal-Dan Chemical Pharmacy's over-the-counter medicines, medical supplies, pharmaceutical distribution and mobile clinic services in Ghana.",
     openGraph: {
-        title: "Our Services | Royal Dan Limited",
+        title: "Products & Services | Royal-Dan Chemical Pharmacy",
         description:
-            "Explore medicine retail, essential health tests and everyday products offered by Royal Dan Limited.",
+            "OTC medicines, first aid kits, medical consumables, pharmaceutical distribution and mobile clinic services.",
         type: "website",
         images: [
             {
                 url: "/images/royal-dan-hero-v2.png",
                 width: 1728,
                 height: 972,
-                alt: "A staff member assisting a customer at a medicine shop",
+                alt: "Royal-Dan Chemical Pharmacy healthcare services",
             },
         ],
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "Products & Services | Royal-Dan Chemical Pharmacy",
+        description:
+            "Explore OTC medicines, medical supplies, pharmaceutical distribution and mobile clinic services in Ghana.",
+        images: ["/images/royal-dan-hero-v2.png"],
+    },
 };
 
-const serviceCategories = [
+const services = [
     {
         number: "01",
-        title: "Over-the-counter medicines",
+        label: "Medicine retail",
+        title: "Over-the-Counter Medicines",
         description:
-            "We provide non-prescription medicines for everyday healthcare needs, with product information to help customers make informed decisions.",
+            "Royal-Dan provides over-the-counter medicines and related healthcare products through our two medicine shops in Greater Accra.",
         items: [
-            "Non-prescription medicines",
-            "Everyday medicine needs",
-            "Product information",
+            "Over-the-counter medicines",
+            "Related healthcare products",
+            "Product availability enquiries",
         ],
+        note: "Available through our Abokobi Boi and Comet Estate branches.",
     },
     {
         number: "02",
-        title: "Selected prescription medicines",
+        label: "Healthcare essentials",
+        title: "Medical Supplies",
         description:
-            "We provide selected prescription medicines in accordance with applicable prescription, dispensing and regulatory requirements.",
+            "We supply essential medical products and healthcare consumables to support everyday needs across homes, businesses and institutions.",
         items: [
-            "Selected prescription medicines",
-            "Prescription verification where required",
-            "Medicine availability enquiries",
+            "First aid kits",
+            "Medical consumables",
+            "Basic healthcare supplies",
         ],
+        note:
+            "Contact our team to discuss your requirements and confirm product availability.",
     },
     {
         number: "03",
-        title: "First aid and aftercare",
+        label: "Supply services",
+        title: "Pharmaceutical Distribution",
         description:
-            "We provide first aid supplies and aftercare essentials to support everyday care and recovery.",
+            "Royal-Dan provides pharmaceutical medicine distribution services to support medicine supply needs for eligible customers and healthcare businesses.",
         items: [
-            "First aid supplies",
-            "Wound-care essentials",
-            "Aftercare products",
+            "Pharmaceutical medicine distribution",
+            "Supply enquiries from eligible customers",
+            "Healthcare business supply requests",
         ],
+        note:
+            "All distribution activities and medicine supplies are subject to applicable regulatory requirements.",
     },
     {
         number: "04",
-        title: "Mart and everyday essentials",
+        label: "Community healthcare",
+        title: "Mobile Clinic",
         description:
-            "Our mart offering provides convenient access to everyday essentials alongside our medicine and healthcare products.",
+            "Our mobile clinic service is intended to bring healthcare services closer to communities and improve access to convenient healthcare support.",
         items: [
-            "Everyday essentials",
-            "Convenience products",
-            "In-store shopping",
+            "Community-focused healthcare access",
+            "Mobile healthcare service delivery",
+            "Service information and enquiries",
         ],
+        note:
+            "Specific services, operating schedules and service locations will be published once confirmed.",
     },
 ];
 
-const healthTests = [
+const audiences = [
     {
-        number: "01",
-        name: "Malaria testing",
+        title: "Individuals and households",
         description:
-            "Testing services to help identify possible malaria infection, with appropriate follow-up based on the result.",
+            "Access OTC medicines through our branches and enquire about essential medical supplies for personal and household needs.",
     },
     {
-        number: "02",
-        name: "Blood pressure checks",
+        title: "Businesses and organisations",
         description:
-            "Blood pressure measurement to help customers understand their readings and when further medical advice may be appropriate.",
+            "Discuss first aid kits and basic healthcare supplies for your workplace, business or organisation.",
     },
     {
-        number: "03",
-        name: "Typhoid testing",
+        title: "Healthcare providers and institutions",
         description:
-            "Typhoid testing services, subject to the applicable testing procedure and clinical requirements.",
-    },
-    {
-        number: "04",
-        name: "Pregnancy testing",
-        description:
-            "Pregnancy testing services for customers seeking information about possible pregnancy.",
-    },
-    {
-        number: "05",
-        name: "HIV testing",
-        description:
-            "HIV testing delivered in accordance with applicable consent, confidentiality and testing requirements.",
-    },
-    {
-        number: "06",
-        name: "BMI assessment",
-        description:
-            "Body mass index assessment using height and weight to provide a basic measure of weight relative to height.",
-    },
-    {
-        number: "07",
-        name: "Other essential tests",
-        description:
-            "Additional essential health testing services to support customers' basic health-check needs.",
+            "Contact our team regarding pharmaceutical distribution and healthcare supply requirements, subject to eligibility and applicable regulations.",
     },
 ];
 
-const visitSteps = [
-    {
-        number: "01",
-        title: "Choose your location",
-        description:
-            "Find the Royal Dan shop most convenient for you in Abokobi Boi or Comet Estate.",
-    },
-    {
-        number: "02",
-        title: "Confirm specific requirements",
-        description:
-            "Check product availability, prescription requirements or any preparation needed for a particular test.",
-    },
-    {
-        number: "03",
-        title: "Visit Royal Dan",
-        description:
-            "Access the available services at your chosen location during its opening hours.",
-    },
+const phoneNumbers = [
+    { label: "0551903525", href: "tel:+233551903525" },
+    { label: "0541577775", href: "tel:+233541577775" },
+    { label: "0593773174", href: "tel:+233593773174" },
 ];
 
 export default function ServicesPage() {
@@ -142,10 +118,10 @@ export default function ServicesPage() {
             {/* Header */}
             <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
                 <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 sm:px-8">
-                    <Link href="/" aria-label="Royal Dan Limited homepage">
+                    <Link href="/" aria-label="Royal-Dan homepage">
                         <Image
                             src="/images/Royal dan.png"
-                            alt="Royal Dan Limited"
+                            alt="Royal-Dan Chemical Pharmacy"
                             width={280}
                             height={100}
                             priority
@@ -179,11 +155,10 @@ export default function ServicesPage() {
                     </nav>
 
                     <Link
-                        href="/locations"
+                        href="/contact"
                         className="shrink-0 rounded-full bg-green-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-green-800 sm:px-5"
                     >
-                        <span className="hidden sm:inline">Find a Shop</span>
-                        <span className="sm:hidden">Locations</span>
+                        Contact Us
                     </Link>
                 </div>
             </header>
@@ -193,45 +168,51 @@ export default function ServicesPage() {
                 <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2 lg:py-28">
                     <div>
                         <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
-                            Our services
+                            Products & Services
                         </p>
 
                         <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-blue-950 sm:text-5xl lg:text-6xl">
-                            Medicines, health checks and everyday essentials.
+                            Healthcare supplies and services for everyday needs.
                         </h1>
 
                         <p className="mt-6 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
-                            Access over-the-counter medicines, selected prescription
-                            medicines, first aid and aftercare products, mart
-                            essentials and essential health testing services at
-                            Royal Dan Limited.
+                            From over-the-counter medicines and medical supplies to
+                            pharmaceutical distribution and mobile clinic services,
+                            Royal-Dan Chemical Pharmacy works to make healthcare products
+                            and services more accessible.
                         </p>
 
                         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                             <Link
-                                href="#health-tests"
+                                href="#our-services"
                                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-blue-900 px-7 py-3 font-semibold text-white transition hover:bg-blue-800"
                             >
-                                Explore Health Tests
-                                <span className="ml-3" aria-hidden="true">↓</span>
+                                Explore Our Services
+                                <span className="ml-3" aria-hidden="true">
+                                    ↓
+                                </span>
                             </Link>
 
                             <Link
                                 href="/locations"
                                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-3 font-semibold text-blue-950 transition hover:border-green-600 hover:text-green-800"
                             >
-                                Find a Shop
+                                Find a Medicine Shop
                             </Link>
                         </div>
+
+                        <p className="mt-6 text-sm leading-6 text-slate-500">
+                            Established in 2024 · Serving customers and healthcare supply
+                            needs in Ghana.
+                        </p>
                     </div>
 
                     <div className="relative">
                         <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-green-100/60 blur-2xl" />
-
                         <div className="overflow-hidden rounded-3xl border border-white shadow-2xl shadow-blue-950/10">
                             <Image
                                 src="/images/royal-dan-hero-v2.png"
-                                alt="A shop assistant helping a customer with a medicine product"
+                                alt="Healthcare customer service at Royal-Dan"
                                 width={1728}
                                 height={972}
                                 priority
@@ -243,42 +224,52 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            {/* Medicines and retail */}
-            <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
+            {/* Service categories */}
+            <section
+                id="our-services"
+                className="scroll-mt-24 mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24"
+            >
                 <div className="max-w-3xl">
                     <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
-                        Medicines and retail
+                        What we provide
                     </p>
 
                     <h2 className="mt-4 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
-                        Everyday products and essential supplies.
+                        Four areas of healthcare support.
                     </h2>
 
                     <p className="mt-5 leading-8 text-slate-600">
-                        Royal Dan brings together medicine retail, first aid,
-                        aftercare and everyday shopping in one convenient setting.
+                        Our services address medicine access, essential healthcare
+                        supplies, distribution requirements and community-focused
+                        healthcare access.
                     </p>
                 </div>
 
-                <div className="mt-10 grid gap-5 md:grid-cols-2">
-                    {serviceCategories.map((service) => (
+                <div className="mt-10 grid gap-6 md:grid-cols-2">
+                    {services.map((service) => (
                         <article
                             key={service.number}
-                            className="rounded-2xl border border-slate-200 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-green-200 hover:shadow-xl hover:shadow-blue-950/5 sm:p-9"
+                            className="flex flex-col rounded-2xl border border-slate-200 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-green-200 hover:shadow-xl hover:shadow-blue-950/5 sm:p-9"
                         >
-                            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 font-bold text-green-800">
-                                {service.number}
+                            <div className="flex items-center justify-between gap-4">
+                                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-50 font-bold text-green-800">
+                                    {service.number}
+                                </span>
+
+                                <span className="text-right text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                    {service.label}
+                                </span>
                             </div>
 
                             <h3 className="mt-6 text-2xl font-bold text-blue-950">
                                 {service.title}
                             </h3>
 
-                            <p className="mt-3 leading-7 text-slate-600">
+                            <p className="mt-4 leading-7 text-slate-600">
                                 {service.description}
                             </p>
 
-                            <ul className="mt-6 space-y-3 border-t border-slate-100 pt-5">
+                            <ul className="mt-6 space-y-3">
                                 {service.items.map((item) => (
                                     <li
                                         key={item}
@@ -292,193 +283,237 @@ export default function ServicesPage() {
                                     </li>
                                 ))}
                             </ul>
+
+                            <div className="mt-auto pt-7">
+                                <div className="rounded-xl bg-slate-50 p-4">
+                                    <p className="text-sm leading-6 text-slate-600">
+                                        {service.note}
+                                    </p>
+                                </div>
+
+                                <Link
+                                    href="/contact"
+                                    className="mt-5 inline-flex items-center font-semibold text-green-800 transition hover:text-green-900"
+                                >
+                                    Enquire about this service
+                                    <span className="ml-2" aria-hidden="true">
+                                        →
+                                    </span>
+                                </Link>
+                            </div>
                         </article>
                     ))}
                 </div>
             </section>
 
-            {/* Health testing */}
-            <section
-                id="health-tests"
-                className="scroll-mt-24 bg-slate-50 py-20 sm:py-24"
-            >
+            {/* Who we serve */}
+            <section className="bg-slate-50 py-20 sm:py-24">
                 <div className="mx-auto max-w-7xl px-5 sm:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
-                            Health testing and checks
+                            Who we serve
                         </p>
 
                         <h2 className="mt-4 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
-                            Essential tests and basic health checks.
+                            Supporting people, businesses and healthcare institutions.
                         </h2>
 
                         <p className="mt-5 leading-8 text-slate-600">
-                            Our health testing services cover a range of common
-                            tests and measurements. Our team can explain the
-                            process and any requirements for the service you need.
+                            Whether you need medicines for everyday use, healthcare supplies
+                            for an organisation or information about distribution, our team
+                            can help you make the appropriate enquiry.
                         </p>
                     </div>
 
-                    <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                        {healthTests.map((test) => (
+                    <div className="mt-10 grid gap-5 md:grid-cols-3">
+                        {audiences.map((audience, index) => (
                             <article
-                                key={test.number}
-                                className="rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-green-200 hover:shadow-lg"
+                                key={audience.title}
+                                className="rounded-2xl border border-slate-200 bg-white p-7 sm:p-8"
                             >
-                                <div className="flex items-center gap-3">
-                                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-sm font-bold text-blue-900">
-                                        {test.number}
-                                    </span>
+                                <span className="text-sm font-bold tracking-widest text-green-700">
+                                    0{index + 1}
+                                </span>
 
-                                    <h3 className="text-lg font-bold text-blue-950">
-                                        {test.name}
-                                    </h3>
-                                </div>
+                                <h3 className="mt-4 text-xl font-bold text-blue-950">
+                                    {audience.title}
+                                </h3>
 
-                                <p className="mt-4 text-sm leading-7 text-slate-600">
-                                    {test.description}
+                                <p className="mt-3 text-sm leading-7 text-slate-600">
+                                    {audience.description}
                                 </p>
                             </article>
                         ))}
                     </div>
-
-                    <div className="mt-8 rounded-2xl border border-blue-100 bg-white p-6 sm:p-8">
-                        <h3 className="text-lg font-bold text-blue-950">
-                            Your health and privacy matter.
-                        </h3>
-
-                        <p className="mt-3 text-sm leading-7 text-slate-600">
-                            Health testing should be carried out by appropriately
-                            qualified personnel in accordance with applicable
-                            requirements. HIV testing must follow appropriate
-                            consent and confidentiality procedures. Test results
-                            should be interpreted in context and do not replace
-                            a medical assessment when one is needed.
-                        </p>
-                    </div>
                 </div>
             </section>
 
-            {/* Visiting information */}
+            {/* Service information */}
             <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
-                <div className="max-w-3xl">
-                    <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
-                        Plan your visit
-                    </p>
+                <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+                    <div>
+                        <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
+                            Important information
+                        </p>
 
-                    <h2 className="mt-4 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
-                        Find the service you need.
-                    </h2>
+                        <h2 className="mt-4 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
+                            Clear information before you make a request.
+                        </h2>
 
-                    <p className="mt-5 leading-8 text-slate-600">
-                        Choose a location and confirm any specific requirements
-                        before travelling, especially for prescription medicines
-                        or diagnostic tests.
-                    </p>
-                </div>
+                        <p className="mt-5 leading-8 text-slate-600">
+                            We want customers and organisations to understand how to enquire
+                            about the products and services they need.
+                        </p>
+                    </div>
 
-                <div className="mt-10 grid gap-5 md:grid-cols-3">
-                    {visitSteps.map((step) => (
-                        <article
-                            key={step.number}
-                            className="rounded-2xl border border-slate-200 p-7"
-                        >
-                            <p className="text-sm font-bold tracking-widest text-green-700">
-                                STEP {step.number}
-                            </p>
-
-                            <h3 className="mt-4 text-xl font-bold text-blue-950">
-                                {step.title}
+                    <div className="space-y-5">
+                        <div className="rounded-2xl border border-slate-200 p-6">
+                            <h3 className="font-bold text-blue-950">
+                                Medicine shops
                             </h3>
-
-                            <p className="mt-3 text-sm leading-7 text-slate-600">
-                                {step.description}
+                            <p className="mt-2 text-sm leading-7 text-slate-600">
+                                OTC medicines and related healthcare products are provided
+                                through our Abokobi Boi and Comet Estate branches. Availability
+                                may vary by product.
                             </p>
-                        </article>
-                    ))}
-                </div>
+                            <Link
+                                href="/locations"
+                                className="mt-4 inline-flex font-semibold text-green-800 hover:text-green-900"
+                            >
+                                View shop locations →
+                            </Link>
+                        </div>
 
-                <div className="mt-8">
-                    <Link
-                        href="/locations"
-                        className="inline-flex items-center font-semibold text-green-800 hover:text-green-900"
-                    >
-                        View shop addresses and opening hours
-                        <span className="ml-2" aria-hidden="true">→</span>
-                    </Link>
+                        <div className="rounded-2xl border border-slate-200 p-6">
+                            <h3 className="font-bold text-blue-950">
+                                Medical supplies and distribution
+                            </h3>
+                            <p className="mt-2 text-sm leading-7 text-slate-600">
+                                Contact us to discuss supply requirements, quantities and
+                                eligibility. Pharmaceutical distribution and medicine supply
+                                remain subject to applicable regulatory requirements.
+                            </p>
+                        </div>
+
+                        <div className="rounded-2xl border border-slate-200 p-6">
+                            <h3 className="font-bold text-blue-950">
+                                Mobile clinic services
+                            </h3>
+                            <p className="mt-2 text-sm leading-7 text-slate-600">
+                                Specific mobile clinic services, schedules and locations will
+                                be published when confirmed. Contact us for information about
+                                future service updates.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             {/* Contact CTA */}
             <section className="bg-blue-950 px-5 py-16 sm:px-8 sm:py-20">
-                <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-7 sm:flex-row sm:items-center">
-                    <div className="max-w-2xl">
+                <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
+                    <div>
                         <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-400">
-                            Get in touch
+                            Contact Royal-Dan
                         </p>
 
-                        <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
-                            How can we help you today?
+                        <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl">
+                            Tell us what you need.
                         </h2>
 
-                        <p className="mt-4 leading-7 text-blue-100">
-                            Visit Royal Dan for medicines, health testing, first aid,
-                            aftercare and everyday essentials. Contact us if you need
-                            information before visiting.
+                        <p className="mt-4 max-w-2xl leading-8 text-blue-100">
+                            Contact our team for product availability, first aid kits,
+                            medical consumables, pharmaceutical distribution enquiries and
+                            mobile clinic service information.
                         </p>
+
+                        <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                            <Link
+                                href="/contact"
+                                className="inline-flex min-h-12 items-center justify-center rounded-full bg-green-600 px-7 py-3 font-semibold text-white transition hover:bg-green-500"
+                            >
+                                Contact Us
+                                <span className="ml-2" aria-hidden="true">
+                                    →
+                                </span>
+                            </Link>
+
+                            <Link
+                                href="/locations"
+                                className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/25 px-7 py-3 font-semibold text-white transition hover:bg-white/10"
+                            >
+                                Find a Medicine Shop
+                            </Link>
+                        </div>
                     </div>
 
-                    <Link
-                        href="/contact"
-                        className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-green-600 px-7 py-3 font-semibold text-white transition hover:bg-green-500"
-                    >
-                        Contact Us
-                        <span className="ml-2" aria-hidden="true">→</span>
-                    </Link>
+                    <div className="rounded-2xl border border-white/15 bg-white/5 p-6 sm:p-8">
+                        <h3 className="text-lg font-bold text-white">
+                            Call our team
+                        </h3>
+
+                        <p className="mt-2 text-sm leading-6 text-blue-100">
+                            Call for general enquiries and product or service information.
+                        </p>
+
+                        <div className="mt-5 space-y-4">
+                            {phoneNumbers.map((phone) => (
+                                <a
+                                    key={phone.label}
+                                    href={phone.href}
+                                    className="flex items-center justify-between gap-4 rounded-xl border border-white/10 px-4 py-3 text-white transition hover:border-green-400"
+                                >
+                                    <span className="font-semibold">{phone.label}</span>
+                                    <span className="text-sm text-green-300">Call →</span>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="border-t border-slate-100 bg-white">
+            {/* Shared site footer: keep this structure consistent across every page */}
+            <footer className="bg-white">
                 <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-2">
                     <div>
-                        <Link href="/" aria-label="Royal Dan Limited homepage">
+                        <Link href="/" aria-label="Royal-Dan Chemical Pharmacy homepage">
                             <Image
                                 src="/images/Royal dan.png"
-                                alt="Royal Dan Limited"
+                                alt="Royal-Dan Chemical Pharmacy"
                                 width={240}
                                 height={90}
                                 className="h-auto w-40 object-contain"
                             />
                         </Link>
-
                         <p className="mt-4 max-w-md text-sm leading-7 text-slate-600">
-                            Royal Dan Limited operates medicine shops in Abokobi Boi
-                            and Comet Estate, Greater Accra, Ghana.
+                            Royal-Dan Chemical Pharmacy operates OTC medicine shops at
+                            Abokobi Boi and Comet Estate in Greater Accra, Ghana.
+                        </p>
+                        <p className="mt-3 text-sm font-semibold text-blue-900">
+                            Your Health, Our Concern.
                         </p>
                     </div>
 
                     <div className="md:justify-self-end">
                         <h2 className="font-bold text-blue-950">Explore</h2>
-
                         <ul className="mt-4 space-y-3 text-sm text-slate-600">
                             <li>
-                                <Link href="/about" className="hover:text-green-700">
+                                <Link className="hover:text-green-700" href="/about">
                                     About Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services" className="hover:text-green-700">
+                                <Link className="hover:text-green-700" href="/services">
                                     Our Services
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/locations" className="hover:text-green-700">
+                                <Link className="hover:text-green-700" href="/locations">
                                     Our Locations
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className="hover:text-green-700">
+                                <Link className="hover:text-green-700" href="/contact">
                                     Contact Us
                                 </Link>
                             </li>
@@ -488,7 +523,7 @@ export default function ServicesPage() {
 
                 <div className="border-t border-slate-100">
                     <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-                        <p>© 2026 Royal Dan Limited. All rights reserved.</p>
+                        <p>© 2026 Royal-Dan Chemical Pharmacy. All rights reserved.</p>
                         <p>Greater Accra Region, Ghana</p>
                     </div>
                 </div>
