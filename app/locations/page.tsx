@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import SiteHeader from "@/components/SiteHeader";
 
 const siteName = "Royal-Dan Chemical Pharmacy";
 
@@ -90,39 +91,8 @@ function LocationDetails({
 export default function LocationsPage() {
     return (
         <main className="min-h-screen bg-white text-slate-800">
-            <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
-                <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
-                    <Link href="/" aria-label={`${siteName} homepage`}>
-                        <Image
-                            src="/images/Royal dan.png"
-                            alt={siteName}
-                            width={280}
-                            height={100}
-                            priority
-                            className="h-auto w-36 object-contain sm:w-48"
-                        />
-                    </Link>
-
-                    <nav
-                        aria-label="Main navigation"
-                        className="hidden items-center gap-6 text-sm font-medium lg:flex"
-                    >
-                        <Link href="/" className="transition hover:text-green-700">Home</Link>
-                        <Link href="/about" className="transition hover:text-green-700">About Us</Link>
-                        <Link href="/services" className="transition hover:text-green-700">Our Services</Link>
-                        <Link href="/locations" aria-current="page" className="text-blue-900">Our Locations</Link>
-                        <Link href="/contact" className="transition hover:text-green-700">Contact Us</Link>
-                    </nav>
-
-                    <Link
-                        href="/contact"
-                        className="shrink-0 rounded-full bg-green-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-green-800 sm:px-5"
-                    >
-                        <span className="hidden sm:inline">Find a Shop</span>
-                        <span className="sm:hidden">Find Shop</span>
-                    </Link>
-                </div>
-            </header>
+            {/* Shared responsive header: desktop navigation and mobile menu */}
+            <SiteHeader activePath="/locations" />
 
             <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50">
                 <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-2 lg:py-24">

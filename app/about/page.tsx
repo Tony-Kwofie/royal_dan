@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import SiteHeader from "@/components/SiteHeader";
 
 const siteName = "Royal-Dan Chemical Pharmacy";
 
@@ -110,57 +111,8 @@ const contactNumbers = [
 export default function AboutPage() {
     return (
         <main className="min-h-screen bg-white text-slate-800">
-            {/* Header */}
-            <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
-                <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 sm:px-8">
-                    <Link href="/" aria-label="Royal-Dan homepage">
-                        <Image
-                            src="/images/Royal dan.png"
-                            alt="Royal-Dan Chemical Pharmacy logo"
-                            width={280}
-                            height={100}
-                            priority
-                            className="h-auto w-40 object-contain sm:w-48"
-                        />
-                    </Link>
-
-                    <nav
-                        aria-label="Main navigation"
-                        className="hidden items-center gap-7 text-sm font-medium lg:flex"
-                    >
-                        <Link href="/" className="transition hover:text-green-700">
-                            Home
-                        </Link>
-                        <Link
-                            href="/about"
-                            aria-current="page"
-                            className="text-blue-900"
-                        >
-                            About Us
-                        </Link>
-                        <Link href="/services" className="transition hover:text-green-700">
-                            Our Services
-                        </Link>
-                        <Link
-                            href="/locations"
-                            className="transition hover:text-green-700"
-                        >
-                            Our Locations
-                        </Link>
-                        <Link href="/contact" className="transition hover:text-green-700">
-                            Contact Us
-                        </Link>
-                    </nav>
-
-                    <Link
-                        href="/contact"
-                        className="shrink-0 rounded-full bg-green-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-green-800 sm:px-5"
-                    >
-                        <span className="hidden sm:inline">Contact Us</span>
-                        <span className="sm:hidden">Contact</span>
-                    </Link>
-                </div>
-            </header>
+            {/* Shared responsive header: desktop navigation and mobile menu */}
+            <SiteHeader activePath="/about" />
 
             {/* Hero */}
             <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50">
