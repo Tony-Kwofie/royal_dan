@@ -3,12 +3,12 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import SiteHeader from "@/components/SiteHeader";
 
-const siteName = "Royal-Dan Chemical Pharmacy";
+const siteName = "Royaldan Limited";
 
 export const metadata: Metadata = {
     title: `Our Locations | ${siteName}`,
     description:
-        "Find Royal-Dan Chemical Pharmacy's OTC medicine shops in Abokobi Boi and Comet Estate, and the central office at Wallace Street, Greater Accra, Ghana.",
+        "Find Royaldan Limited's OTC medicine shops in Abokobi Boi and Comet Estate, and the central office at Wallace Street, Greater Accra, Ghana.",
     openGraph: {
         title: `Our Locations | ${siteName}`,
         description:
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
                 url: "/images/royal-dan-location.png",
                 width: 1728,
                 height: 972,
-                alt: "Royal-Dan Chemical Pharmacy location",
+                alt: "Royaldan Limited location",
             },
         ],
     },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: `Our Locations | ${siteName}`,
         description:
-            "Find Royal-Dan Chemical Pharmacy's medicine shops in Abokobi Boi and Comet Estate, Greater Accra, Ghana.",
+            "Find Royaldan Limited's medicine shops in Abokobi Boi and Comet Estate, Greater Accra, Ghana.",
         images: ["/images/royal-dan-location.png"],
     },
 };
@@ -198,7 +198,7 @@ export default function LocationsPage() {
                     <div>
                         <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">Company office</p>
                         <h2 className="mt-4 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
-                            Royal-Dan central office
+                            Royaldan Limited central office
                         </h2>
                         <p className="mt-5 leading-8 text-slate-600">
                             Our central office is located on Wallace Street in Comet Estate.
@@ -243,7 +243,7 @@ export default function LocationsPage() {
                         <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-400">Need assistance?</p>
                         <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">We are happy to help.</h2>
                         <p className="mt-4 leading-7 text-blue-100">
-                            Contact Royal-Dan Chemical Pharmacy with general enquiries about our
+                            Contact Royaldan Limited with general enquiries about our
                             locations, products or services before making your visit.
                         </p>
                     </div>
@@ -268,17 +268,17 @@ export default function LocationsPage() {
             <footer className="bg-white">
                 <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-2">
                     <div>
-                        <Link href="/" aria-label="Royal-Dan Chemical Pharmacy homepage">
+                        <Link href="/" aria-label="Royaldan Limited homepage">
                             <Image
                                 src="/images/Royal dan.png"
-                                alt="Royal-Dan Chemical Pharmacy"
+                                alt="Royaldan Limited"
                                 width={240}
                                 height={90}
                                 className="h-auto w-40 object-contain"
                             />
                         </Link>
                         <p className="mt-4 max-w-md text-sm leading-7 text-slate-600">
-                            Royal-Dan Chemical Pharmacy operates OTC medicine shops at
+                            Royaldan Limited operates OTC medicine shops at
                             Abokobi Boi and Comet Estate in Greater Accra, Ghana.
                         </p>
                         <p className="mt-3 text-sm font-semibold text-blue-900">
@@ -316,7 +316,7 @@ export default function LocationsPage() {
                 <div className="border-t border-slate-100">
                     <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 text-xs text-slate-500 sm:px-8">
                         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                            <p>© 2026 Royal-Dan Chemical Pharmacy. All rights reserved.</p>
+                            <p>© 2026 Royaldan Limited. All rights reserved.</p>
                             <p>Greater Accra Region, Ghana</p>
                         </div>
                         <div className="flex flex-col gap-2 border-t border-slate-100 pt-3 sm:flex-row sm:items-center sm:justify-between">

@@ -4,14 +4,14 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import SiteHeader from "@/components/SiteHeader";
 
-const siteName = "Royal-Dan Chemical Pharmacy";
+const siteName = "Royaldan Limited";
 
 export const metadata: Metadata = {
-    title: "About Us | Royal-Dan Chemical Pharmacy",
+    title: "About Us | Royaldan Limited",
     description:
-        "Learn about Royal-Dan Chemical Pharmacy, established in 2024 to provide OTC medicines, medical supplies, pharmaceutical distribution and mobile clinic services in Ghana.",
+        "Learn about Royaldan Limited, established in 2024 to provide OTC medicines, medical supplies, pharmaceutical distribution and mobile clinic services in Ghana.",
     openGraph: {
-        title: "About Royal-Dan Chemical Pharmacy",
+        title: "About Royaldan Limited",
         description:
             "Accessible medicines, medical consumables, pharmaceutical distribution and mobile healthcare services in Ghana.",
         type: "website",
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
                 url: "/images/royal-dan-about.png",
                 width: 1728,
                 height: 972,
-                alt: "Royal-Dan Chemical Pharmacy",
+                alt: "Royaldan Limited",
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: "About Royal-Dan Chemical Pharmacy",
+        title: "About Royaldan Limited",
         description:
-            "Learn about Royal-Dan Chemical Pharmacy and our healthcare products and services in Ghana.",
+            "Learn about Royaldan Limited and our healthcare products and services in Ghana.",
         images: ["/images/royal-dan-about.png"],
     },
 };
@@ -119,7 +119,7 @@ export default function AboutPage() {
                 <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2 lg:py-28">
                     <div>
                         <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
-                            About Royal-Dan
+                            About Royaldan Limited
                         </p>
 
                         <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-blue-950 sm:text-5xl lg:text-6xl">
@@ -127,7 +127,7 @@ export default function AboutPage() {
                         </h1>
 
                         <p className="mt-6 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
-                            Established in 2024, Royal-Dan Chemical Pharmacy is a
+                            Established in 2024, Royaldan Limited is a
                             healthcare-focused business providing access to over-the-counter
                             medicines, medical supplies, pharmaceutical distribution and
                             mobile clinic services.
@@ -172,7 +172,7 @@ export default function AboutPage() {
                         <div className="overflow-hidden rounded-3xl border border-white shadow-2xl shadow-blue-950/10">
                             <Image
                                 src="/images/royal-dan-about.png"
-                                alt="Royal-Dan healthcare team and customer service"
+                                alt="Royaldan Limited healthcare team and customer service"
                                 width={1728}
                                 height={972}
                                 priority
@@ -208,7 +208,7 @@ export default function AboutPage() {
 
                     <div className="space-y-5 text-base leading-8 text-slate-600">
                         <p>
-                            Royal-Dan Chemical Pharmacy was established in 2024 with a
+                            Royaldan Limited was established in 2024 with a
                             healthcare-focused mission: to make essential healthcare products
                             and services more accessible and convenient.
                         </p>
@@ -330,7 +330,7 @@ export default function AboutPage() {
                 <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
                     <div>
                         <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
-                            Why Royal-Dan
+                            Why Royaldan Limited
                         </p>
 
                         <h2 className="mt-4 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
@@ -375,7 +375,7 @@ export default function AboutPage() {
                         </p>
 
                         <h2 className="mt-4 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
-                            Speak with Royal-Dan.
+                            Speak with Royaldan Limited.
                         </h2>
 
                         <p className="mt-5 leading-8 text-slate-600">
@@ -440,7 +440,7 @@ export default function AboutPage() {
                         </p>
 
                         <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl">
-                            Visit a Royal-Dan medicine shop.
+                            Visit a Royaldan Limited medicine shop.
                         </h2>
 
                         <p className="mt-4 leading-8 text-blue-100">
@@ -465,17 +465,17 @@ export default function AboutPage() {
             <footer className="bg-white">
                 <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-2">
                     <div>
-                        <Link href="/" aria-label="Royal-Dan Chemical Pharmacy homepage">
+                        <Link href="/" aria-label="Royaldan Limited homepage">
                             <Image
                                 src="/images/Royal dan.png"
-                                alt="Royal-Dan Chemical Pharmacy"
+                                alt="Royaldan Limited"
                                 width={240}
                                 height={90}
                                 className="h-auto w-40 object-contain"
                             />
                         </Link>
                         <p className="mt-4 max-w-md text-sm leading-7 text-slate-600">
-                            Royal-Dan Chemical Pharmacy operates OTC medicine shops at
+                            Royaldan Limited operates OTC medicine shops at
                             Abokobi Boi and Comet Estate in Greater Accra, Ghana.
                         </p>
                         <p className="mt-3 text-sm font-semibold text-blue-900">
@@ -513,7 +513,7 @@ export default function AboutPage() {
                 <div className="border-t border-slate-100">
                     <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 text-xs text-slate-500 sm:px-8">
                         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                            <p>© 2026 Royal-Dan Chemical Pharmacy. All rights reserved.</p>
+                            <p>© 2026 Royaldan Limited. All rights reserved.</p>
                             <p>Greater Accra Region, Ghana</p>
                         </div>
                         <div className="flex flex-col gap-2 border-t border-slate-100 pt-3 sm:flex-row sm:items-center sm:justify-between">

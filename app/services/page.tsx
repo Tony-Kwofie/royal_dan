@@ -5,11 +5,11 @@ import type { Metadata } from "next";
 import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
-    title: "Products & Services | Royal-Dan Chemical Pharmacy",
+    title: "Products & Services | Royaldan Limited",
     description:
-        "Explore Royal-Dan Chemical Pharmacy's over-the-counter medicines, medical supplies, pharmaceutical distribution and mobile clinic services in Ghana.",
+        "Explore Royaldan Limited's over-the-counter medicines, medical supplies, pharmaceutical distribution and mobile clinic services in Ghana.",
     openGraph: {
-        title: "Products & Services | Royal-Dan Chemical Pharmacy",
+        title: "Products & Services | Royaldan Limited",
         description:
             "OTC medicines, first aid kits, medical consumables, pharmaceutical distribution and mobile clinic services.",
         type: "website",
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
                 url: "/images/hero.png",
                 width: 1728,
                 height: 972,
-                alt: "Royal-Dan Chemical Pharmacy healthcare services",
+                alt: "Royaldan Limited healthcare services",
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Products & Services | Royal-Dan Chemical Pharmacy",
+        title: "Products & Services | Royaldan Limited",
         description:
             "Explore OTC medicines, medical supplies, pharmaceutical distribution and mobile clinic services in Ghana.",
         images: ["/images/hero.png"],
@@ -37,7 +37,7 @@ const services = [
         label: "Medicine retail",
         title: "Over-the-Counter Medicines",
         description:
-            "Royal-Dan provides over-the-counter medicines and related healthcare products through our two medicine shops in Greater Accra.",
+            "Royaldan provides over-the-counter medicines and related healthcare products through our two medicine shops in Greater Accra.",
         items: [
             "Over-the-counter medicines",
             "Related healthcare products",
@@ -64,7 +64,7 @@ const services = [
         label: "Supply services",
         title: "Pharmaceutical Distribution",
         description:
-            "Royal-Dan provides pharmaceutical medicine distribution services to support medicine supply needs for eligible customers and healthcare businesses.",
+            "Royaldan provides pharmaceutical medicine distribution services to support medicine supply needs for eligible customers and healthcare businesses.",
         items: [
             "Pharmaceutical medicine distribution",
             "Supply enquiries from eligible customers",
@@ -134,7 +134,7 @@ export default function ServicesPage() {
                         <p className="mt-6 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
                             From over-the-counter medicines and medical supplies to
                             pharmaceutical distribution and mobile clinic services,
-                            Royal-Dan Chemical Pharmacy works to make healthcare products
+                            Royaldan Limited works to make healthcare products
                             and services more accessible.
                         </p>
 
@@ -168,7 +168,7 @@ export default function ServicesPage() {
                         <div className="overflow-hidden rounded-3xl border border-white shadow-2xl shadow-blue-950/10">
                             <Image
                                 src="/images/hero.png"
-                                alt="Healthcare customer service at Royal-Dan"
+                                alt="Healthcare customer service at Royaldan"
                                 width={1728}
                                 height={972}
                                 priority
@@ -370,7 +370,7 @@ export default function ServicesPage() {
                 <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
                     <div>
                         <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-400">
-                            Contact Royal-Dan
+                            Contact Royaldan
                         </p>
 
                         <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl">
@@ -432,17 +432,17 @@ export default function ServicesPage() {
             <footer className="bg-white">
                 <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-2">
                     <div>
-                        <Link href="/" aria-label="Royal-Dan Chemical Pharmacy homepage">
+                        <Link href="/" aria-label="Royaldan Limited homepage">
                             <Image
                                 src="/images/Royal dan.png"
-                                alt="Royal-Dan Chemical Pharmacy"
+                                alt="Royaldan Limited"
                                 width={240}
                                 height={90}
                                 className="h-auto w-40 object-contain"
                             />
                         </Link>
                         <p className="mt-4 max-w-md text-sm leading-7 text-slate-600">
-                            Royal-Dan Chemical Pharmacy operates OTC medicine shops at
+                            Royaldan Limited operates OTC medicine shops at
                             Abokobi Boi and Comet Estate in Greater Accra, Ghana.
                         </p>
                         <p className="mt-3 text-sm font-semibold text-blue-900">
@@ -480,7 +480,7 @@ export default function ServicesPage() {
                 <div className="border-t border-slate-100">
                     <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 text-xs text-slate-500 sm:px-8">
                         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                            <p>© 2026 Royal-Dan Chemical Pharmacy. All rights reserved.</p>
+                            <p>© 2026 Royaldan Limited. All rights reserved.</p>
                             <p>Greater Accra Region, Ghana</p>
                         </div>
                         <div className="flex flex-col gap-2 border-t border-slate-100 pt-3 sm:flex-row sm:items-center sm:justify-between">
